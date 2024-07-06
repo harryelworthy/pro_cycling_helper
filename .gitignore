@@ -1,6 +1,6 @@
 *.pt
 video_metadata.csv
-testing.ipynb
 raw_videos/*
 video_snippets/*
-images/*
+annotated_images/*
+runs/*

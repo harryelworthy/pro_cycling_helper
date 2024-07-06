@@ -2,18 +2,12 @@
 
 The aim of this project is to classify frames of videos of pro cycling with riders split into teams. From this classification we can hopefully produce interesting stats, like which teams have the most TV time in a race, or who spends the most time on the front.
 
-Current status:
-* Pulled videos from 3 spring classics, cut them to race time, took 100 random stills from each
-* Labelled the stills with YOLOv8x, only looking for people. Converted labels to labelimg format
-* Self-annotated 300 images with labelimg
-    * Added cyclists that were clearly missed
-    * Removed spectators and motos
-    * Didn't add every cyclist (would be too much work) - instead tried to stick to similar cyclists to those labelled by YOLO, either close to the camera or without overlap
+Right now I've pulled images from races and manually updated naive YOLO annotations, and trained a YOLO model on those annotated images to detect cyclists.
 
 TODO
-* Benchmark trained model (eye test, plus a real test?)
-* Write code to randomly pull cyclist images
-* Classify them into teams
+* Eye test trained model
+    * It seems to be dropping spectators better than the original, but it is still picking them up sometimes. Maybe I should annotate spectators in the images as well, given their similarity to cyclists?
+* Manually classify generated crops into teams
 
 * Use existing model? Or train another YOLO instance to classify teams, then I'll vectorise and cluster to be more flexible
 * Visualize results
