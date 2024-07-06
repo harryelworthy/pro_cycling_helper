@@ -11,12 +11,15 @@ Current status:
     * Didn't add every cyclist (would be too much work) - instead tried to stick to similar cyclists to those labelled by YOLO, either close to the camera or without overlap
 
 TODO
-* Refactor - most current stuff should be in a utils folder
-* Write code to train YOLOv8x with the new data. Will need to colab/GPU
-* Benchmark (eye test, plus a real test?)
-* Create a function to go through a race video and pull a still at each second and add those stills to a folder, along with metadata on time and overlap
-    * Maybe should do embedding here and put into a vectorized DB
-* Deal with overlap - maybe don't need to?
-* Use a model for embedding the images
-* Run clustering of some kind on the embeddings
+* Benchmark trained model (eye test, plus a real test?)
+* Write code to randomly pull cyclist images
+* Classify them into teams
+
+* Use existing model? Or train another YOLO instance to classify teams, then I'll vectorise and cluster to be more flexible
 * Visualize results
+* Look at vector DB
+ 
+* Write actual inference code
+* Deal with overlap - maybe don't need to?
+
+* Clean up data_collection & add readme for that step

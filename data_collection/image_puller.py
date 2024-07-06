@@ -2,7 +2,7 @@ import random
 from moviepy.editor import VideoFileClip
 import pandas as pd
 import os
-from video_cleaner import crop_video, timestamp_to_seconds
+from data_collection.video_cleaner import crop_video, timestamp_to_seconds
 
 def save_random_images(input_file, input_path, output_path, num_images=1, start_time=None,end_time=None):
     # Load the video file
