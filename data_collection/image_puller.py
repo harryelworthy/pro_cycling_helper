@@ -2,7 +2,7 @@ import random
 from moviepy.editor import VideoFileClip
 import pandas as pd
 import os
-from data_collection.video_cleaner import crop_video, timestamp_to_seconds
+from video_cleaner import crop_video, timestamp_to_seconds
 
 def save_random_images(input_file, input_path, output_path, num_images=1, start_time=None,end_time=None):
     # Load the video file
@@ -27,7 +27,7 @@ def save_random_images(input_file, input_path, output_path, num_images=1, start_
 
 if __name__ == "__main__":
     # Number of images per race
-    num_images = 100
+    num_images = 0
     # List of Videos to chop
     videos = pd.read_csv("video_metadata.csv")
     # Directories

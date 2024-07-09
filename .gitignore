@@ -4,3 +4,4 @@ raw_videos/*
 video_snippets/*
 annotated_images/*
 runs/*
+crops/*
